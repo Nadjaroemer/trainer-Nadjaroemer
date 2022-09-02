@@ -1,4 +1,10 @@
+import Navigation from "../templates/Navigation";
+
 const Home = () => {
-  return <div></div>;
+  return (
+    <>
+      <Navigation />
+    </>
+  );
 };
 export default Home;

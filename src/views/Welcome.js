@@ -1,4 +1,6 @@
+import WelcomeSection from "../templates/WelcomeSection";
+
 const Welcome = () => {
-  return <div></div>;
+  return <WelcomeSection />;
 };
 export default Welcome;

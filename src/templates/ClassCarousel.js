@@ -1,5 +1,5 @@
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
-import ClassCard from "../components/ClassCard";
+import ClassCard from "../components/ClassCardHeader";
 
 const ClassCarousel = ({ data }) => {
   return (

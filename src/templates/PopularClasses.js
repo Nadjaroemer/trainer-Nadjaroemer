@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import HeadlineH3 from "../components/HeadlineH3";
-import ClassCard from "../components/ClassCard";
+import ClassCard from "../components/ClassCardHeader";
 import ClassCarousel from "./ClassCarousel";
 
 const PopularClasses = () => {

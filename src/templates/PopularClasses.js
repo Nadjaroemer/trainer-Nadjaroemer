@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import HeadlineH3 from "../components/HeadlineH3";
-import ClassCard from "../components/ClassCardHeader";
+import FeaturedCard from "../components/FeaturedCard";
 import ClassCarousel from "./ClassCarousel";
 
 const PopularClasses = () => {
@@ -17,7 +17,7 @@ const PopularClasses = () => {
 
   return (
     <section className="">
-      {classes && <ClassCard data={classes[getRandomClass()]} />}
+      {classes && <FeaturedCard data={classes[getRandomClass()]} />}
       <div className="ml-4 ml-6">
         <HeadlineH3 text="Classes for you" />
       </div>

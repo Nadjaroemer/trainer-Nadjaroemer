@@ -1,12 +1,12 @@
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
-import ClassCard from "../components/ClassCardHeader";
+import FeaturedCard from "../components/FeaturedCard";
 
 const ClassCarousel = ({ data }) => {
   return (
     <div className="ml-6 overflow-hidden">
       <ScrollMenu>
         {data.map((item, index) => (
-          <ClassCard data={item} key={index} />
+          <FeaturedCard data={item} key={index} />
         ))}
       </ScrollMenu>
     </div>

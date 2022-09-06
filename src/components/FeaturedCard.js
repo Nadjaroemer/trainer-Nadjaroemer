@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
 
-const ClassCard = ({ data }) => {
+const FeaturedCard = ({ data }) => {
   return (
     <Link to={`/classdetails/${data.id}`} className="">
       <div
@@ -25,4 +25,4 @@ const ClassCard = ({ data }) => {
     </Link>
   );
 };
-export default ClassCard;
+export default FeaturedCard;

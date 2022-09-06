@@ -1,7 +1,11 @@
+import ClassSection from "../templates/ClassSection";
+import Navigation from "../templates/Navigation";
+
 const ClassDetails = () => {
   return (
     <>
-      <div></div>
+      <Navigation />
+      <ClassSection />
     </>
   );
 };

@@ -3,7 +3,7 @@ import FeaturedCard from "../components/FeaturedCard";
 
 const ClassCarousel = ({ data }) => {
   return (
-    <div className="ml-6 overflow-hidden">
+    <div className="mr-4 overflow-hidden grid-rows-1">
       <ScrollMenu>
         {data.map((item, index) => (
           <FeaturedCard data={item} key={index} />

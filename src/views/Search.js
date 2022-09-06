@@ -1,4 +1,6 @@
+import TrainerCard from "../components/TrainerCard";
+
 const Search = () => {
-  return <div></div>;
+  return <TrainerCard />;
 };
 export default Search;

@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { StateContext } from "../context/Context";
 
 const ClassDetailsHeader = ({ data }) => {
-  const { userData, setUserData } = useContext(StateContext);
+  const { userData } = useContext(StateContext);
   return (
     <header className="-mt-20">
       <div

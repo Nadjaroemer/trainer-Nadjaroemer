@@ -8,7 +8,7 @@ import TrainerCard from "./TrainerCard";
 const ClassDetailsInfo = ({ data }) => {
   const [trainerData, setTrainerData] = useState();
   const [isSignedUp, setIsSignedUp] = useState(false);
-  const { userData, setUserData, userToken } = useContext(StateContext);
+  const { userToken, userData, setUserData } = useContext(StateContext);
 
   const config = {
     headers: { Authorization: `Bearer ${userToken.token}` },
@@ -17,7 +17,7 @@ const ClassDetailsInfo = ({ data }) => {
   const signUp = () => {
     axios
       .post(
-        `http://localhost:4000/api/v1/users/${userToken.userId}/classes/${data.id}`,
+        `http://localhost:4000/api/v1/users/${userData.id}/classes/${data.id}`,
         {},
         config
       )
@@ -29,7 +29,7 @@ const ClassDetailsInfo = ({ data }) => {
   const leave = () => {
     axios
       .delete(
-        `http://localhost:4000/api/v1/users/${userToken.userId}/classes/${data.id}`,
+        `http://localhost:4000/api/v1/users/${userData.id}/classes/${data.id}`,
         config
       )
       .then(() => {
@@ -41,12 +41,12 @@ const ClassDetailsInfo = ({ data }) => {
     axios
       .get(`http://localhost:4000/api/v1/trainers/${data.trainerId}`)
       .then((response) => setTrainerData(response.data));
-  }, []);
+  }, [data.trainerId]);
 
   useEffect(() => {
-    if (userToken) {
+    if (userData) {
       axios
-        .get(`http://localhost:4000/api/v1/users/${userToken.userId}`, config)
+        .get(`http://localhost:4000/api/v1/users/${userData.id}`, config)
         .then((response) => setUserData(response.data));
     }
   }, [isSignedUp]);
@@ -59,7 +59,7 @@ const ClassDetailsInfo = ({ data }) => {
         }
       });
     }
-  }, [userData]);
+  }, [data.id, userData]);
 
   return (
     <div className="p-6 flex flex-col gap-6">
@@ -69,13 +69,15 @@ const ClassDetailsInfo = ({ data }) => {
       <p>{data.classDescription}</p>
       <HeadlineH3 text="Trainer" />
       {trainerData && <TrainerCard data={trainerData} />}
-      {userToken && (
+      {userData && (
         <>
           {!isSignedUp && (
             <button
               className="bg-secondary py-5 px-10 rounded-full text-center uppercase font-bold"
               onClick={() => signUp()}
-            >{`Sign up (${data.users.length}/${data.maxParticipants})`}</button>
+            >
+              Sign Up
+            </button>
           )}
           {isSignedUp && (
             <button

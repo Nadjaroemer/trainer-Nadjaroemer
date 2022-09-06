@@ -12,18 +12,22 @@ import SignIn from "./views/SignIn";
 import Welcome from "./views/Welcome";
 
 function App() {
-  const { userToken, userData, setUserData } = useContext(StateContext);
-  const config = {
-    headers: { Authorization: `Bearer ${userToken.token}` },
-  };
+  const { userToken, setUserData } = useContext(StateContext);
+
   useEffect(() => {
     if (userToken) {
       axios
-        .get(`http://localhost:4000/api/v1/users/${userToken.userId}`, config)
-        .then((response) => setUserData(response.data));
+        .get(`http://localhost:4000/api/v1/users/${userToken.userId}`, {
+          headers: { Authorization: `Bearer ${userToken?.token}` },
+        })
+        .then((response) => {
+          setUserData(response.data);
+        });
     }
-  }, [userToken]);
+  }, [setUserData, userToken]);
+
   const location = useLocation();
+
   return (
     <>
       <Routes location={location} key={location.key}>

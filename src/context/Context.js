@@ -4,7 +4,11 @@ const StateContext = createContext();
 
 const ContextProvider = ({ children }) => {
   const [userData, setUserData] = useState(false);
-  const value = useMemo(() => ({ userData, setUserData }), [userData]);
+  const [userToken, setUserToken] = useState(false);
+  const value = useMemo(
+    () => ({ userData, setUserData, userToken, setUserToken }),
+    [userData, userToken]
+  );
   return (
     <StateContext.Provider value={value}>{children}</StateContext.Provider>
   );

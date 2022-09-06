@@ -1,6 +1,3 @@
-import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
 import HeadlineH3 from "../components/HeadlineH3";
 import FeaturedCard from "../components/FeaturedCard";
 import ClassCarousel from "./ClassCarousel";

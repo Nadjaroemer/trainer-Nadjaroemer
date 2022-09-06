@@ -40,7 +40,7 @@ function App() {
         <Route path="/home" element={<Home classes={classes} />} />
         <Route path="/classdetails/:id" element={<ClassDetails />} />
         <Route path="/schedule" element={<Schedule />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/search" element={<Search classes={classes} />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/" element={<Welcome />} />
       </Routes>

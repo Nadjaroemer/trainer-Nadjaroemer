@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import HeadlineH3 from "../components/HeadlineH3";
 import ClassCard from "../components/ClassCard";
+import ClassCarousel from "./ClassCarousel";
 
 const PopularClasses = () => {
   const [classes, setClasses] = useState();
@@ -17,7 +18,10 @@ const PopularClasses = () => {
   return (
     <section className="">
       {classes && <ClassCard data={classes[getRandomClass()]} />}
-      <HeadlineH3 text="Classes for you" />
+      <div className="ml-4 ml-6">
+        <HeadlineH3 text="Classes for you" />
+      </div>
+      {classes && <ClassCarousel data={classes} />}
     </section>
   );
 };

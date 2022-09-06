@@ -25,13 +25,13 @@ const Navigation = () => {
         <div className="flex">
           {location.pathname !== "/home" && (
             <button onClick={() => navigate(-1)}>
-              <MdOutlineKeyboardArrowLeft className="text-3xl text-secondary" />
+              <MdOutlineKeyboardArrowLeft className="text-3xl text-tertiary-700" />
             </button>
           )}
           <HeadlineH2 text={pageName} />
         </div>
         <button onClick={() => setToggle(true)}>
-          <HiOutlineMenuAlt3 className="text-2xl" />
+          <HiOutlineMenuAlt3 className="text-2xl text-tertiary-700" />
         </button>
       </nav>
       {toggle && <NavigationMenu setToggle={setToggle} />}

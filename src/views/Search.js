@@ -27,13 +27,13 @@ const Search = (props) => {
   return (
     <>
       <Navigation />
-      <div className="p-6">
-        <input
+      <div className="ml-6 mr-6">
+        <input className= "w-full border rounded-3xl border-tertiary-500 p-3"
           value={searchValue}
           onChange={(event) => {
             setSearchValue(event.target.value);
           }}
-          placeholder="Search for classes"
+          placeholder="Search classes"
         ></input>
       </div>
       {searchValue ? (

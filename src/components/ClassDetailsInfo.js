@@ -14,6 +14,14 @@ const ClassDetailsInfo = ({ data }) => {
     headers: { Authorization: `Bearer ${userToken.token}` },
   };
 
+  const refetchAndSetUserData = () => {
+    if (userData) {
+      axios
+        .get(`http://localhost:4000/api/v1/users/${userData.id}`, config)
+        .then((response) => setUserData(response.data));
+    }
+  };
+
   const signUp = () => {
     axios
       .post(
@@ -23,6 +31,7 @@ const ClassDetailsInfo = ({ data }) => {
       )
       .then(() => {
         setIsSignedUp(true);
+        refetchAndSetUserData();
       });
   };
 
@@ -34,6 +43,7 @@ const ClassDetailsInfo = ({ data }) => {
       )
       .then(() => {
         setIsSignedUp(false);
+        refetchAndSetUserData();
       });
   };
 
@@ -42,14 +52,6 @@ const ClassDetailsInfo = ({ data }) => {
       .get(`http://localhost:4000/api/v1/trainers/${data.trainerId}`)
       .then((response) => setTrainerData(response.data));
   }, [data.trainerId]);
-
-  useEffect(() => {
-    if (userData) {
-      axios
-        .get(`http://localhost:4000/api/v1/users/${userData.id}`, config)
-        .then((response) => setUserData(response.data));
-    }
-  }, [isSignedUp]);
 
   useEffect(() => {
     if (userData) {

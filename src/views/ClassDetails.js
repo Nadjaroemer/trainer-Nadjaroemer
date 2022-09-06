@@ -1,7 +1,7 @@
 import ClassSection from "../templates/ClassSection";
 import Navigation from "../templates/Navigation";
 
-const ClassDetails = () => {
+const ClassDetails = (props) => {
   return (
     <>
       <Navigation />

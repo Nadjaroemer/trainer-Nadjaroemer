@@ -1,6 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useContext } from "react";
-import { useEffect } from "react";
+import { useEffect, useContext, useState } from "react";
 import axios from "axios";
 
 import { StateContext } from "./context/Context";
@@ -13,6 +12,7 @@ import Welcome from "./views/Welcome";
 
 function App() {
   const { userToken, setUserData } = useContext(StateContext);
+  const [classes, setClasses] = useState();
 
   useEffect(() => {
     if (userToken) {
@@ -26,12 +26,18 @@ function App() {
     }
   }, [setUserData, userToken]);
 
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/api/v1/classes")
+      .then((response) => setClasses(response.data));
+  }, []);
+
   const location = useLocation();
 
   return (
     <>
       <Routes location={location} key={location.key}>
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Home classes={classes} />} />
         <Route path="/classdetails/:id" element={<ClassDetails />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/search" element={<Search />} />

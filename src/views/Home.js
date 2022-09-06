@@ -1,11 +1,11 @@
 import Navigation from "../templates/Navigation";
 import PopularClasses from "../templates/PopularClasses";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <>
       <Navigation />
-      <PopularClasses />
+      <PopularClasses classes={props.classes} />
     </>
   );
 };

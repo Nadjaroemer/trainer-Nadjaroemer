@@ -25,7 +25,7 @@ const Navigation = () => {
         <div className="flex">
           {location.pathname !== "/home" && (
             <button onClick={() => navigate(-1)}>
-              <BiArrowBack className="text-3xl text-tertiary-700" />
+              <BiArrowBack className="text-3xl text-tertiary-700 mr-3" />
             </button>
           )}
           <HeadlineH2 text={pageName} />

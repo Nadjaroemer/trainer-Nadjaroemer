@@ -1,4 +1,4 @@
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { useContext } from "react";
 import { StateContext } from "../context/Context";
 
@@ -21,10 +21,10 @@ const ClassDetailsHeader = ({ data }) => {
           <AiFillStar className="text-secondary mr-2" />
           <AiFillStar className="text-secondary mr-2" />
           <AiFillStar className="text-secondary mr-2" />
-          <AiFillStar className="text-secondary mr-2" />
-          <p className="text-secondary">5/5</p>
+          <AiOutlineStar className="text-secondary mr-2" />
+          <p className="text-secondary">4/5</p>
           {userData && (
-            <button className="text-center uppercase font-bold border-secondary border-2 text-secondary py-3 px-7 ml-6">
+            <button className="text-center uppercase font-bold border-secondary rounded-full border-2 text-secondary py-3 px-7 ml-6">
               Rate
             </button>
           )}

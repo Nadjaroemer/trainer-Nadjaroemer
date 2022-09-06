@@ -1,8 +1,8 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import HeadlineH2 from "../components/HeadlineH2";
-import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { useState } from "react";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { BiArrowBack } from "react-icons/bi";
+import HeadlineH2 from "../components/HeadlineH2";
 import NavigationMenu from "./NavigationMenu";
 
 const Navigation = () => {
@@ -25,7 +25,7 @@ const Navigation = () => {
         <div className="flex">
           {location.pathname !== "/home" && (
             <button onClick={() => navigate(-1)}>
-              <MdOutlineKeyboardArrowLeft className="text-3xl text-tertiary-700" />
+              <BiArrowBack className="text-3xl text-tertiary-700" />
             </button>
           )}
           <HeadlineH2 text={pageName} />

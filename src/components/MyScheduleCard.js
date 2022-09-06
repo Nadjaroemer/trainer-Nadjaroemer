@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const ScheduleCard = ({ data }) => {
+const MyScheduleCard = ({ data }) => {
   return (
     <Link
       to={`/classdetails/${data.id}`}
@@ -12,4 +12,4 @@ const ScheduleCard = ({ data }) => {
   );
 };
 
-export default ScheduleCard;
+export default MyScheduleCard;

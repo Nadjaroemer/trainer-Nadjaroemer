@@ -1,4 +1,4 @@
-import { useParams, useNavigate, useLocation, Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import HeadlineH2 from "../components/HeadlineH2";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";

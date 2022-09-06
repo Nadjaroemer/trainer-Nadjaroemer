@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import HeadlineH3 from "../components/HeadlineH3";
 import { useContext } from "react";
@@ -9,7 +10,7 @@ import { StateContext } from "../context/Context";
 import { useState } from "react";
 
 const LoginForm = () => {
-  const { userData, setUserData } = useContext(StateContext);
+  const { setUserToken } = useContext(StateContext);
   const schema = yup
     .object({
       username: yup.string().required("Please enter email"),
@@ -37,8 +38,8 @@ const LoginForm = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        if (data.token) {
-          setUserData(data);
+        if (data) {
+          setUserToken(data);
           navigate("/home");
         } else {
           setLoginError("Invalid email or password");
@@ -55,19 +56,24 @@ const LoginForm = () => {
         className="flex p-6 flex-col"
         id="loginForm"
       >
+        {errors.username && <p>{errors.username.message}</p>}
         <input
           {...register("username")}
           type="text"
           className="border-tertiary border py-5 px-10 rounded-full mb-4"
           placeholder="Enter your email..."
+          autoComplete="username"
         />
+        {errors.password && <p>{errors.password.message}</p>}
         <input
           {...register("password")}
           type="password"
           className="border-tertiary border py-5 px-10 rounded-full mb-4"
           placeholder="Enter your password..."
+          autoComplete="current-password"
         />
         <Button type="button" text="Sign in" />
+        {loginError && <p className="text-center pt-4">{loginError}</p>}
       </form>
     </div>
   );

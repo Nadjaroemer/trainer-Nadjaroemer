@@ -23,11 +23,11 @@ ReactJS
 
 Tailwind Css
 
-- Utility-first Css framework, som gør det muligt at style hurtigt med deres inbyggede utility-classes, som skrives direkte i HTML'en. Derudover gør det responsive styling meget nemmere.
+- Utility-first Css framework, som gør det muligt at style hurtigt med deres inbyggede utility-classes, som skrives direkte i HTML'en.
 
 React Router
 
-- React giver mulighed for at undgå page-load ved brug af routeren. Dermed bliver min app optimeret og er hurtigere for brugeren.
+- React Router gør det muligt at undgå page-load. Dermed bliver aplicationen meget hurtigere for brugeren.
 
 Axios
 

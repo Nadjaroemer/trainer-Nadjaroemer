@@ -1,10 +1,61 @@
-# Getting Started with Create React App
+# Projektdokumentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Navn:** Nadja Rømer Hesselbjerg
 
-## Available Scripts
+**Hold:** WU06
 
-In the project directory, you can run:
+**Uddannelse:** Webudvikler
+
+**Uddannelsessted:** Roskilde Teknisk Skole
+
+## Stack
+
+- HTML
+- CSS
+- Javascript
+- ReactJS
+
+## Teknisk Dokumentation
+
+ReactJS
+
+- Jeg har valgt ReactJS som framework for min application, først og fremmest fordi det er et framework jeg føler mig mest hjemme i, og derfor kan arbejde effektivt og detaileorienteret. Men det er selvfølige ikke hovedargumenterne, ReactJS er et komponentbaseret open-source javascript bibliotek, som gør det muligt for udvikler at arbejde fleksibelt på grunden af dens modulære opbygning. Det er nemt at vedligeholde ens application og biblioteket tilbyder kraftfuld tilstands-, handlings- og begivenhedsstyring. ReactJS arbejder derudover sammen med Virtual DOM. Med denne funktion vil kun den nødvendige del af programmet blive opdateret i stedet for det hele. Virtual DOM kan sammenligne de tidligere og regelmæssige tilstande af komponenterne, og dette hjælper med at udvikle hurtigere resultater.
+
+Tailwind Css
+
+- Utility-first Css framework, som gør det muligt at style hurtigt med deres inbyggede utility-classes, som skrives direkte i HTML'en. Derudover gør det responsive styling meget nemmere.
+
+React Router
+
+- React giver mulighed for at undgå page-load ved brug af routeren. Dermed bliver min app optimeret og er hurtigere for brugeren.
+
+Axios
+
+- Afløser fetch og henter data udfra en url.(Ligesom fetch, men retur-objectet er bedre structureret).
+
+React Icons
+
+- Bibliotek af Ikoner, som nemt kan importeres ind i react projekter.
+
+React-Horizontal-Scrolling-Menu
+
+- Jeg har brugt react-horizontal-scrolling-menu pakken til at lave min scrolling slider. Den leverer en react-component { ScrollMenu }, som har den inbygget funktionalitet man skal bruge til at lave en enkel touch slider.
+
+React Hook Form og Yup
+
+- Til min login process har jeg valgt react-hook-form i forbindelse med yup. React Hook Form er et hook-system som indsamler og validerer form data. Yup gør det endnu nemmere at rendere custom fejlmeddelelser med deres error-map. (Med andre ord: kortere kode, mere overskuelig kode).
+
+###Valgfri opgave C - Automatiseret Deployment-løst
+
+Som valgri opgave har jeg valt automatiseret deployment, fordi jeg ikke har særlig meget erfaring med det, men samtidig gerne ville blive bedre til det. Jeg har valgt Netlify, som kan nemt tilknyttes et Github repository.
+
+Klik her: [Live deployment](https://trainwithnadja.netlify.app)
+
+Da man ikke kunne tilknytte vores rts-github-classroom account, har jeg lavet en fork af mit repository, som er tilknyttet Netlify.
+
+Klik her, hvis du vil se min fork: [Live deployment fork](https://github.com/Nadjaroemer/trainer-Nadjaroemer)
+
+Hvis du vil starte applicationen:
 
 ### `npm start`
 
@@ -13,58 +64,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

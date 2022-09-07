@@ -49,7 +49,7 @@ React Hook Form og Yup
 
 ## Valgfri opgave C - Automatiseret Deployment - løst
 
-Som valgri opgave har jeg valt automatiseret deployment, fordi jeg ikke har særlig meget erfaring med det, men samtidig gerne ville blive bedre til det. Jeg har valgt Netlify, som kan nemt tilknyttes et Github repository.
+Som valfri opgave har jeg valt automatiseret deployment, fordi jeg ikke har særlig meget erfaring med det, men samtidig gerne ville blive bedre til det. Jeg har valgt Netlify, som kan nemt tilknyttes et Github repository.
 
 Klik her: [Live deployment](https://trainwithnadja.netlify.app)
 

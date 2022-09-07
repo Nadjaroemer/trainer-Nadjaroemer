@@ -1,5 +1,5 @@
-import image1 from "../assets/welcomebackground.jpg";
-import image2 from "../assets/welcomecenter.jpg";
+import welcomebackground1 from "../assets/welcomebackground.jpg";
+import welcomebackground2 from "../assets/welcomecenter.jpg";
 import Header from "../components/Headline";
 import Button from "../components/Button";
 
@@ -9,7 +9,7 @@ const WelcomeSection = () => {
       <div
         className="flex-1 flex object-cover"
         style={{
-          backgroundImage: `url(${image1})`,
+          backgroundImage: `url(${welcomebackground1})`,
           backgroundSize: "cover",
         }}
       >
@@ -23,7 +23,7 @@ const WelcomeSection = () => {
       <div
         className="flex-1 flex align-end pb-12 justify-center object-cover"
         style={{
-          backgroundImage: `url(${image2})`,
+          backgroundImage: `url(${welcomebackground2})`,
           backgroundSize: "cover",
         }}
       >

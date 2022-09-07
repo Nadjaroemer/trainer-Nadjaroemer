@@ -12,7 +12,7 @@ const PopularClasses = (props) => {
           <FeaturedCard data={props.classes[getRandomClass()]} />
         )}
       </div>
-      <div className="">
+      <div className="ml-6">
         <HeadlineH3 text="Classes for you" />
       </div>
       {props.classes && <ClassCarousel data={props.classes} />}

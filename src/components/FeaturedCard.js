@@ -3,7 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 
 const FeaturedCard = ({ data }) => {
   return (
-    <Link to={`/classdetails/${data.id}`} className="">
+    <Link to={`/classdetails/${data.id}`}>
       <div
         style={{
           backgroundImage: `url(${data.asset.url})`,

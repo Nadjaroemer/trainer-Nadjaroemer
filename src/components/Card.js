@@ -11,7 +11,7 @@ const Card = ({ data }) => {
         backgroundSize: "cover",
       }}
     >
-      <div className="self-end p-3 rounded-tr-[3rem] w-full bg-secondary">
+      <div className="grid grid-cols-1 grid-rows-[23px] self-end p-3 rounded-tr-[3rem] w-full bg-secondary ">
         <p className="font-bold text-xs">{data.className}</p>
         <div className="flex mt-2">
           <AiFillStar className="text-black mr-1 text-sm" />

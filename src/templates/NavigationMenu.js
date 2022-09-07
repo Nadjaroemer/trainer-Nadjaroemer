@@ -1,8 +1,8 @@
-import NavMenuItem from "../components/NavMenuItem";
-import { GrFormClose } from "react-icons/gr";
-import { useContext } from "react";
-import { StateContext } from "../context/Context";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { HiX } from "react-icons/hi";
+import NavMenuItem from "../components/NavMenuItem";
+import { StateContext } from "../context/Context";
 
 const NavigationMenu = ({ setToggle }) => {
   const navigate = useNavigate();
@@ -13,9 +13,9 @@ const NavigationMenu = ({ setToggle }) => {
   };
   return (
     <div className="w-full h-screen absolute top-0 bg-white z-10">
-      <div className="flex justify-end px-6 pt-6 pb-12 ">
+      <div className="flex justify-end px-6 pt-8">
         <button onClick={() => setToggle(false)}>
-          <GrFormClose className="text-3xl text-secondary" />
+          <HiX className="text-3xl text-tertiary-700" />
         </button>
       </div>
       <ul className="text-center">

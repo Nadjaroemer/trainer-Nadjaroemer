@@ -1,7 +1,7 @@
+import axios from "axios";
 import { useContext } from "react";
 import { StateContext } from "../context/Context";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import HeadlineH3 from "./HeadlineH3";
 import TrainerCard from "./TrainerCard";
 
@@ -35,7 +35,7 @@ const ClassDetailsInfo = ({ data }) => {
       });
   };
 
-  const leave = () => {
+  const signOut = () => {
     axios
       .delete(
         `http://localhost:4000/api/v1/users/${userData.id}/classes/${data.id}`,
@@ -84,7 +84,7 @@ const ClassDetailsInfo = ({ data }) => {
           {isSignedUp && (
             <button
               className="bg-secondary py-5 px-10 rounded-full text-center uppercase font-bold"
-              onClick={() => leave()}
+              onClick={() => signOut()}
             >
               Leave class
             </button>

@@ -17,7 +17,7 @@ const Navigation = () => {
     pageName = "Search";
   }
   if (location.pathname === "/schedule") {
-    pageName = "My schedule";
+    pageName = "My Schedule";
   }
   return (
     <>

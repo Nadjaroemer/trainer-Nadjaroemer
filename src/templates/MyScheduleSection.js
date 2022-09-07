@@ -8,7 +8,11 @@ const MyScheduleSection = () => {
   console.log("userdata classes: ", userData);
 
   if (!userData) {
-    return <div>Please login to see your schedule</div>;
+    return (
+      <div className="mt-16 text-secondary text-center">
+        Please sign in to see your schedule
+      </div>
+    );
   }
 
   return (

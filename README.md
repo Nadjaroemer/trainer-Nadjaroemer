@@ -61,7 +61,7 @@ I min [søgefunktion](/src/views/Search.js) anvender jeg conditional rendering.
 
 Jeg bruger to metoder:
 
-1. ternery operator, hvor jeg kigger på om jeg har en søg-værdig eller ej
+1. ternery operator, hvor jeg kigger på om jeg har en søg-værdi eller ej
 
 ```
 return (

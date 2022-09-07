@@ -57,6 +57,82 @@ Da man ikke kunne tilknytte vores rts-github-classroom account, har jeg lavet en
 
 Klik her, hvis du vil se min fork: [Live deployment fork](https://github.com/Nadjaroemer/trainer-Nadjaroemer)
 
+## Kode til særlig bedømmelse
+
+I min [søgefunktion](/src/views/Search.js) anvender jeg conditional rendering.
+
+Jeg bruger to metoder:
+
+1. ternery operator, hvor jeg kigger på om jeg har en søg-værdig eller ej
+
+```
+return (
+    <>
+      <Navigation />
+      <div className="ml-6 mr-6">
+        <input
+          className="w-full border rounded-3xl border-tertiary-500 p-3"
+          value={searchValue}
+          onChange={(event) => {
+            setSearchValue(event.target.value);
+          }}
+          placeholder="Search classes"
+        ></input>
+      </div>
+      {searchValue ? (
+        renderSearchResults()
+      ) : (
+        <>
+          <div className="p-6 grid grid-cols-2 grid-rows-auto">
+            <HeadlineH3 text="Popular classes" />
+          </div>
+          {classes && <ClassCarousel data={classes} />}
+          <div className="p-6 flex flex-col gap-4">
+            <HeadlineH3 text="Popular trainers" />
+            {trainers &&
+              trainers.map((item, index) => (
+                <TrainerCard data={item} key={index} />
+              ))}
+          </div>
+        </>
+      )}
+    </>
+  );
+
+```
+
+2. Jeg bruger en funktion, hvor jeg bruger if-else til at retunere to forskellige outputs
+
+```
+const renderSearchResults = () => {
+    const searchResults = props.classes?.filter((individualClass) => {
+      return individualClass.className
+        .toLowerCase()
+        .includes(searchValue.toLowerCase());
+    });
+    if (searchResults.length === 0) {
+      return (
+        <div className="ml-6 mt-12">
+          <HeadlineH3 text="No classes found. Please try again." />;
+        </div>
+      );
+    }
+    return (
+      <>
+        <div className="ml-6 mt-12">
+          <HeadlineH3 text="Search results" />
+        </div>
+        <div className="p-6 grid grid-cols-2 grid-rows-auto">
+          {searchResults.map((individualClass) => {
+            return <Card key={individualClass.id} data={individualClass} />;
+          })}
+        </div>
+      </>
+    );
+  };
+
+```
+
 ## Hvis du vil starte applicationen...
 
 ### `npm start`

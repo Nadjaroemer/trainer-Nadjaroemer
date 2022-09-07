@@ -1,9 +1,8 @@
-import NavMenuItem from "../components/NavMenuItem";
-import { GrFormClose } from "react-icons/gr";
-import { HiX } from "react-icons/hi";
-import { useContext } from "react";
-import { StateContext } from "../context/Context";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { HiX } from "react-icons/hi";
+import NavMenuItem from "../components/NavMenuItem";
+import { StateContext } from "../context/Context";
 
 const NavigationMenu = ({ setToggle }) => {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
+import axios from "axios";
 import { useContext } from "react";
 import { StateContext } from "../context/Context";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import HeadlineH3 from "./HeadlineH3";
 import TrainerCard from "./TrainerCard";
 

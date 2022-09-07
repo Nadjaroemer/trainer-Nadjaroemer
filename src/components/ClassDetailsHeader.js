@@ -1,5 +1,5 @@
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { useContext } from "react";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { StateContext } from "../context/Context";
 
 const ClassDetailsHeader = ({ data }) => {

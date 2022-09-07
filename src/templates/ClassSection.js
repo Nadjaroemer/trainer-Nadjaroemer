@@ -1,7 +1,7 @@
+import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 import ClassDetailsHeader from "../components/ClassDetailsHeader";
 import ClassDetailsInfo from "../components/ClassDetailsInfo";
 

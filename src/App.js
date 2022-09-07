@@ -1,7 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useContext, useState } from "react";
 import axios from "axios";
-
 import { StateContext } from "./context/Context";
 import Home from "./views/Home";
 import ClassDetails from "./views/ClassDetails";

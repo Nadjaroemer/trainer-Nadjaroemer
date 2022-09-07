@@ -47,7 +47,7 @@ React Hook Form og Yup
 
 - Til min login process har jeg valgt react-hook-form i forbindelse med yup. React Hook Form er et hook-system som indsamler og validerer form data. Yup gør det endnu nemmere at rendere custom fejlmeddelelser med deres error-map. (Med andre ord: kortere kode, mere overskuelig kode).
 
-###Valgfri opgave C - Automatiseret Deployment-løst
+### Valgfri opgave C - Automatiseret Deployment - løst
 
 Som valgri opgave har jeg valt automatiseret deployment, fordi jeg ikke har særlig meget erfaring med det, men samtidig gerne ville blive bedre til det. Jeg har valgt Netlify, som kan nemt tilknyttes et Github repository.
 

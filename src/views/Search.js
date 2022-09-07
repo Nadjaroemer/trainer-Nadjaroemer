@@ -23,6 +23,33 @@ const Search = (props) => {
       .then((response) => setTrainers(response.data));
   }, []);
 
+  const renderSearchResults = () => {
+    const searchResults = props.classes?.filter((individualClass) => {
+      return individualClass.className
+        .toLowerCase()
+        .includes(searchValue.toLowerCase());
+    });
+    if (searchResults.length === 0) {
+      return (
+        <div className="ml-6 mt-12">
+          <HeadlineH3 text="No classes found. Please try again." />;
+        </div>
+      );
+    }
+    return (
+      <>
+        <div className="ml-6 mt-12">
+          <HeadlineH3 text="Search results" />
+        </div>
+        <div className="p-6 grid grid-cols-2 grid-rows-auto">
+          {searchResults.map((individualClass) => {
+            return <Card key={individualClass.id} data={individualClass} />;
+          })}
+        </div>
+      </>
+    );
+  };
+
   return (
     <>
       <Navigation />
@@ -37,22 +64,7 @@ const Search = (props) => {
         ></input>
       </div>
       {searchValue ? (
-        <>
-          <div className="ml-6 mt-12">
-            <HeadlineH3 text="Search results" />
-          </div>
-          <div className="p-6 grid grid-cols-2 grid-rows-auto">
-            {props.classes
-              ?.filter((individualClass) => {
-                return individualClass.className
-                  .toLowerCase()
-                  .includes(searchValue.toLowerCase());
-              })
-              .map((individualClass) => {
-                return <Card key={individualClass.id} data={individualClass} />;
-              })}
-          </div>
-        </>
+        renderSearchResults()
       ) : (
         <>
           <div className="p-6 grid grid-cols-2 grid-rows-auto">

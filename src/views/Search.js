@@ -3,7 +3,6 @@ import axios from "axios";
 
 import Navigation from "../templates/Navigation";
 import HeadlineH3 from "../components/HeadlineH3";
-
 import ClassCarousel from "../templates/ClassCarousel";
 import TrainerCard from "../components/TrainerCard";
 import Card from "../components/Card";
@@ -28,7 +27,8 @@ const Search = (props) => {
     <>
       <Navigation />
       <div className="ml-6 mr-6">
-        <input className= "w-full border rounded-3xl border-tertiary-500 p-3"
+        <input
+          className="w-full border rounded-3xl border-tertiary-500 p-3"
           value={searchValue}
           onChange={(event) => {
             setSearchValue(event.target.value);
@@ -37,21 +37,25 @@ const Search = (props) => {
         ></input>
       </div>
       {searchValue ? (
-        <div className="p-6">
-          <h4>Search results</h4>
-          {props.classes
-            ?.filter((individualClass) => {
-              return individualClass.className
-                .toLowerCase()
-                .includes(searchValue.toLowerCase());
-            })
-            .map((individualClass) => {
-              return <Card key={individualClass.id} data={individualClass} />;
-            })}
-        </div>
+        <>
+          <div className="ml-6 mt-12">
+            <HeadlineH3 text="Search results" />
+          </div>
+          <div className="p-6 grid grid-cols-2 grid-rows-auto">
+            {props.classes
+              ?.filter((individualClass) => {
+                return individualClass.className
+                  .toLowerCase()
+                  .includes(searchValue.toLowerCase());
+              })
+              .map((individualClass) => {
+                return <Card key={individualClass.id} data={individualClass} />;
+              })}
+          </div>
+        </>
       ) : (
         <>
-          <div className="p-6">
+          <div className="p-6 grid grid-cols-2 grid-rows-auto">
             <HeadlineH3 text="Popular classes" />
           </div>
           {classes && <ClassCarousel data={classes} />}

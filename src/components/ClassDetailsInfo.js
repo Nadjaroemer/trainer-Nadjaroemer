@@ -35,7 +35,7 @@ const ClassDetailsInfo = ({ data }) => {
       });
   };
 
-  const leave = () => {
+  const signOut = () => {
     axios
       .delete(
         `http://localhost:4000/api/v1/users/${userData.id}/classes/${data.id}`,
@@ -84,7 +84,7 @@ const ClassDetailsInfo = ({ data }) => {
           {isSignedUp && (
             <button
               className="bg-secondary py-5 px-10 rounded-full text-center uppercase font-bold"
-              onClick={() => leave()}
+              onClick={() => signOut()}
             >
               Leave class
             </button>

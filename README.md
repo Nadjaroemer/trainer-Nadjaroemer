@@ -19,9 +19,7 @@
 
 ReactJS
 
-- Jeg har valgt ReactJS som framework for min application, først og fremmest fordi det er et framework jeg føler mig mest hjemme i, og jeg derfor kan arbejde meget mere hurtigt, effektivt og detaileorienteret. Men det er selvfølige ikke hovedargumentet.
-
-ReactJS er et komponentbaseret open-source javascript bibliotek, som gør det muligt for udvikler at arbejde fleksibelt på grunden af dens modulære opbygning. Det er nemt at vedligeholde ens application, og biblioteket tilbyder kraftfuld tilstands-, handlings- og begivenhedsstyring. ReactJS arbejder derudover sammen med Virtual DOM. Med denne funktion vil kun den nødvendige del af programmet blive opdateret i stedet for det hele. Virtual DOM kan sammenligne de tidligere og regelmæssige tilstande af komponenterne, og dette hjælper med at udvikle hurtigere resultater.
+- Jeg har valgt ReactJS som framework for min application, først og fremmest fordi det er et framework jeg føler mig mest hjemme i, og jeg derfor kan arbejde meget mere hurtigt, effektivt og detaileorienteret. Men det er selvfølige ikke hovedargumentet. ReactJS er et komponentbaseret open-source javascript bibliotek, som gør det muligt for udvikler at arbejde fleksibelt på grunden af dens modulære opbygning. Det er nemt at vedligeholde ens application, og biblioteket tilbyder kraftfuld tilstands-, handlings- og begivenhedsstyring. ReactJS arbejder derudover sammen med Virtual DOM. Med denne funktion vil kun den nødvendige del af programmet blive opdateret i stedet for det hele. Virtual DOM kan sammenligne de tidligere og regelmæssige tilstande af komponenterne, og dette hjælper med at udvikle hurtigere resultater.
 
 Tailwind Css
 
